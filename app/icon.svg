@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2_copy_2" data-name="Layer 2 copy 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1232.01 1232.01">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fafafa;
+        stroke: #fafafa;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="m616.01,2C276.9,2,2,276.9,2,616.01s274.9,614.01,614.01,614.01,614.01-274.9,614.01-614.01S955.11,2,616.01,2Zm0,1148.83v-304.74c127.08,0,230.08-103,230.08-230.08s-103-230.08-230.08-230.08V81.18c295.38,0,534.83,239.45,534.83,534.83s-239.45,534.83-534.83,534.83Z"/>
+</svg>

@@ -3,31 +3,83 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-color: #fafafa;
+  --background-color: #161616;
+  --color-ash: #808080;
+  --color-orange: #FF9900;
+  --color-blue-light: #4B5D6E;
+  --color-blue-dark: #343C60;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+body > * {
+  padding: 0 4vw;
+}
+
+.nav a{
+  font-weight: 300 !important;
+}
+
+.nav a:hover, 
+.nav .active {
+  color: var(--color-ash);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+/* Media Breakpoints */
+/* 
+	0	- 600px(37.5em): 		  Phones
+	600 - 900px(56.25em): 	Tablet portriat
+	900 - 1200px(75em): 		Tablet landscape	
+  1200px & above:         Big Screen
+*/
+
+@media (max-width: 75em) {
+	html {
+		font-size: 56.25%;
+	}
+}
+
+@media (max-width: 56.25em) {
+	html {
+		font-size: 50%;
+	}
+}
+
+@media (max-width: 37.5em) {
+	html {
+		font-size: 43.75%;
+	}
+}
+
+@media (min-width: 112.5em) {
+	html {
+		font-size: 75%;
+	}
 }
