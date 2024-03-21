@@ -1,7 +1,5 @@
 .bottomLn {
-  width: 100%;
+  width: calc(100% + 8vw);
   flex-shrink: 0;
-  position: absolute;
-  bottom: 0;
   transform: translateX(-4vw);
 }

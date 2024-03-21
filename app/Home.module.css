@@ -1,7 +1,6 @@
 .heroSection {
   width: 100%;
-  height: calc(100vh - 7rem);
-  padding-bottom: 6vw;
+  height: calc(100vh - 6rem - 5vw);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -29,6 +28,7 @@
   align-self: flex-end;
   display: flex;
   gap: 2rem;
+  padding-bottom: 2.5rem;
 }
 
 .socials svg {
@@ -48,8 +48,9 @@
 .heroSectBgText {
   display: inline;
   position: absolute;
-  bottom: 20vh;
-  right: -50%;
+  bottom: 10%;
+  right: 0;
+  transform: translateX(58%);
   font-family: var(--font-outfit);
   font-size: 15rem;
   font-style: 900;
