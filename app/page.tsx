@@ -4,7 +4,6 @@ import styles from "./Home.module.css";
 import Button from "./components/Button/Button";
 import Link from "next/link";
 import { faBehance, faGithubAlt, faInstagram, faXTwitter } from "@fortawesome/free-brands-svg-icons";
-import { outfit } from "./layout";
 import HeroBtmLn from "./components/HeroSectionLn/HeroBtmLn";
 
 export default function Home() {
@@ -36,7 +35,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className={`${styles.heroSectBgText} ${outfit.className}`}>Development</div>
+        <div className={`${styles.heroSectBgText}`}>Development</div>
 
       </section>
 

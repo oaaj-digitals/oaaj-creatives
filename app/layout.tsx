@@ -14,12 +14,14 @@ config.autoAddCss = false
 
 const sora = Sora({
   subsets: ["latin"],
-  weight: ['300', '400', '500', '600', '700']
+  weight: ['300', '400', '500', '600', '700'],
+  variable: "--font-sora",
 });
 
-export const outfit = Outfit({
+const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["900"]
+  weight: ["900"],
+  variable: "--font-outfit",
 });
 
 export const metadata: Metadata = {
@@ -42,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={sora.className}>
+    <html lang="en" className={`${sora.variable} ${outfit.variable}`}>
+      <body>
         <header className={headerStyles.header} >
           <Link href={""}><Image src={logo} alt="OAAJ Creative Lab Logo" height={`${30}`} /></Link>
           <nav className={"nav " + headerStyles.nav}>

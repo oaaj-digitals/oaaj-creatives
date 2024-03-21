@@ -50,6 +50,7 @@
   position: absolute;
   bottom: 20vh;
   right: -50%;
+  font-family: var(--font-outfit);
   font-size: 15rem;
   font-style: 900;
   letter-spacing: 3px;
