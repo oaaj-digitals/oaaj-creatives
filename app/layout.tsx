@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Sora } from "next/font/google";
+import { Sora, Outfit } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import logo from '@/public/imgs/logo.svg';
@@ -7,9 +7,19 @@ import headerStyles from "./Header.module.css"
 import footerStyle from "./Footer.module.css"
 import Link from "next/link";
 
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
+
+
 const sora = Sora({
   subsets: ["latin"],
   weight: ['300', '400', '500', '600', '700']
+});
+
+export const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["900"]
 });
 
 export const metadata: Metadata = {

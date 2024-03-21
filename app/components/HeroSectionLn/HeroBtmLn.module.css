@@ -1,0 +1,7 @@
+.bottomLn {
+  width: 100%;
+  flex-shrink: 0;
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-4vw);
+}
