@@ -1,0 +1,110 @@
+.btnBox {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.text {
+  transform: translateY(20%);
+}
+
+.text.orange {
+  color: var(--color-orange);
+}
+
+.text.white {
+  color: var(--foreground-color);
+}
+
+.btn {
+  border-radius: 100px;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* Primary Btn Style */
+
+.primaryBtn {
+  background-color: var(--color-orange) !important;
+}
+
+.primaryBtn .shadowEffect {
+  border-color: var(--foreground-color) !important;
+}
+
+.primaryBtn:hover {
+  color: var(--color-orange);
+  background-color: var(--foreground-color) !important;
+}
+
+.primaryBtn:hover .shadowEffect {
+  border-color: var(--color-orange) !important;
+}
+
+/* Secondary Btn Style */
+
+.secondaryBtn {
+  background-color: var(--color-blue-light) !important;
+}
+
+.secondaryBtn .shadowEffect {
+  background-color: transparent;
+}
+
+.secondaryBtn:hover {
+  color: var(--color-blue-light);
+  background-color: var(--foreground-color) !important;
+}
+
+.secondaryBtn:hover .shadowEffect {
+  border-color: var(--color-blue-light) !important;
+}
+
+/* Tertiary Btn Style */
+
+.tertiaryBtn {
+  border: 1px solid var(--foreground-color) !important;
+  background-color: var(--background-color) !important;
+}
+
+.tertiaryBtn .shadowEffect {
+  background-color: var(--color-orange);
+  border-color: var(--color-orange);
+}
+
+.tertiaryBtn:hover {
+  color: var(--background-color);
+  background-color: var(--color-orange) !important;
+  border-color: var(--color-orange) !important;
+}
+
+.tertiaryBtn:hover .shadowEffect {
+  background-color: var(--background-color);
+  border-color: var(--foreground-color) !important;
+}
+
+.diagonal {
+  transform: rotateZ(45deg);
+}
+
+.shadowEffect {
+  content: " ";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  border: 1px solid white;
+  position: absolute;
+  top: 20%;
+  right: 15%;
+  z-index: -10;
+}
+
+.left .shadowEffect {
+  right: 0;
+  left: 15% !important;
+}
+
+.right .shadowEffect {
+  right: 15% !important;
+}
