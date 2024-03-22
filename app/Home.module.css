@@ -51,3 +51,61 @@
   right: 0;
   transform: translateX(58%);
 }
+
+/* About Section Styling */
+.aboutSection {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 600;
+  width: 40%;
+  color: var(--color-blue-light);
+}
+
+.txtBox {
+  width: 45%;
+}
+
+.aboutSection > * {
+  flex-shrink: 0;
+}
+
+.coreValueBox {
+  width: 100%;
+  padding: 0 5vw;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12vw;
+}
+
+.logoImg {
+  width: 10%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.coreDiv {
+  width: 30%;
+}
+
+.coreTitle {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-ash);
+  margin-bottom: 0.5rem;
+}
+
+.aboutSectBgText {
+  bottom: 15%;
+  left: 0;
+}
