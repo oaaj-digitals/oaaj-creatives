@@ -51,6 +51,20 @@ body > * {
   }
 }
 
+.noSelect {
+  user-select: none;
+}
+
+.bgText {
+  display: inline-block;
+  position: absolute;
+  font-family: var(--font-outfit);
+  font-size: 15rem;
+  font-style: 900;
+  letter-spacing: 3px;
+  opacity: 0.02;
+}
+
 /* Media Breakpoints */
 /* 
 	0	- 600px(37.5em): 		  Phones

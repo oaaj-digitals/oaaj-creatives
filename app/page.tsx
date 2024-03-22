@@ -17,7 +17,7 @@ export default function Home() {
 
           <p className={styles.introSub}>OAAJ Creative Labs crafts delightful digital experiences.</p>
 
-          <Button text={"Connect with Us."} direction="diagonal" type="primaryBtn" textColor="orange" styles={{ marginTop: "2.5rem" }} />
+          <Button direction="diagonal" type="primaryBtn" textColor="orange" styles={{ marginTop: "2.5rem" }}>Connect with Us.</Button>
         </div>
 
         <div className={styles.socials}>
@@ -35,11 +35,12 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className={`${styles.heroSectBgText}`}>Development</div>
+        <div className={`${styles.heroSectBgText} noSelect bgText`} aria-hidden>Development</div>
 
       </section>
 
       <HeroBtmLn />
+
     </main>
   );
 }
