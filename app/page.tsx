@@ -6,6 +6,10 @@ import Link from "next/link";
 import { faBehance, faGithubAlt, faInstagram, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import HeroBtmLn from "./components/HeroSectionLn/HeroBtmLn";
 import logo from '@/public/imgs/logo.svg';
+import DisplayProject from "./components/DisplayProject/DisplayProject";
+import ClipPath from "./components/DisplayProject/ClipPath";
+import img from '@/public/milad-fakurian-2sICkGsJRQY-unsplash.jpg';
+import ScrollBtn from "./components/ScrollBtn";
 
 export default function Home() {
   return (
@@ -18,7 +22,7 @@ export default function Home() {
 
           <p className={styles.introSub}>OAAJ Creative Labs crafts delightful digital experiences.</p>
 
-          <Button direction="diagonal" type="primaryBtn" textColor="orange" styles={{ marginTop: "2.5rem" }}>Connect with Us.</Button>
+          <Button to="/contact_us" direction="diagonal" type="primaryBtn" textColor="orange" styles={{ marginTop: "2.5rem" }}>Connect with Us.</Button>
         </div>
 
         <div className={styles.socials}>
@@ -43,7 +47,7 @@ export default function Home() {
       <HeroBtmLn />
 
       <section className={`overflow-x-hidden ${styles.aboutSection}`}>
-        <h3 className={styles.heading}>Driven by passion, we&apos;re a team of friendly creatives who transform brand visions into unique digital experiences.</h3>
+        <h3 className={styles.abtHeading}>Driven by passion, we&apos;re a team of friendly creatives who transform brand visions into unique digital experiences.</h3>
         <div className={styles.txtBox}>
           <p>OAAJ is a creative agency fueled by a shared passion for crafting exceptional digital experiences. Born from a desire to bridge the gap between imagination and reality, our team of experienced designers, developers, and strategists collaborate to transform your brand vision into aunique and engaging online presence. We believe in building long-lasting relationships with our clients, becoming an extension of their team and guiding them through every step of the journey.</p>
           <Button direction="diagonal" type="primaryBtn" textColor="orange" styles={{ marginTop: "2.5rem" }}>More</Button>
@@ -74,6 +78,23 @@ export default function Home() {
         </div>
 
         <div className={`${styles.aboutSectBgText} noSelect bgText`} aria-hidden>About Us</div>
+      </section>
+
+      <section className={`mt-20 mb-20 ${styles.wrkSection}`}>
+        <div className={styles.wrkTxtBox}>
+          <h2 className={styles.wrkHeading}>Our Latest Works.</h2>
+          <p className={styles.headingSub}>We take pride in crafting exceptional digital experiences, and we invite you to see how we&apos;ve helped our clients thrive.</p>
+        </div>
+        <div className={styles.displayBox} id="displayProjects">
+          <ClipPath />
+          <DisplayProject title="Test" image={img} category="web development" to="" />
+          <DisplayProject title="Test" image={img} category="web development" to="" />
+          <DisplayProject title="Test" image={img} category="web development" to="" />
+          <DisplayProject title="Test" image={img} category="web development" to="" />
+        </div>
+        <div className={styles.wrkNavDiv}>
+          <ScrollBtn />
+        </div>
       </section>
     </main>
   );

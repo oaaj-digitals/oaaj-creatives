@@ -5,29 +5,41 @@ import { faArrowLeftLong, faArrowRightLong, faArrowUpLong } from '@fortawesome/f
 import btnStyles from "./Button.module.css";
 
 interface Props {
-    children: ReactNode,
+    children?: ReactNode;
     to?: string;
     direction: "left" | "right" | "diagonal";
     type: "primaryBtn" | "secondaryBtn" | "tertiaryBtn";
     textColor?: "white" | "orange";
-    styles: CSSProperties | undefined,
+    styles?: CSSProperties;
+    handleClick?: () => void;
 }
 
-const Button = ({ children, to, direction, type, textColor, styles }: Props) => {
+const Btn = (type: Props['type'], direction: Props["direction"], handleClick?: Props["handleClick"]) => {
+    return (<button className={`${btnStyles.btn} ${btnStyles[type]}`} onClick={handleClick && (() => handleClick())}>
+        {direction === 'diagonal' ? <FontAwesomeIcon icon={faArrowUpLong} className={btnStyles.diagonal} /> : null}
+
+        {direction === 'left' ? <FontAwesomeIcon icon={faArrowLeftLong} /> : null}
+
+        {direction === 'right' ? <FontAwesomeIcon icon={faArrowRightLong} /> : null}
+
+        <div className={`${btnStyles.shadowEffect}`}></div>
+    </button>)
+}
+
+const Button = ({ children, to, direction, type, textColor, styles, handleClick }: Props) => {
     return (
         <div className={`${btnStyles.btnBox} `} style={styles}>
             <p className={`${btnStyles.text} ${textColor ? btnStyles[textColor] : ""}`}>{children}</p>
-            <Link href={to || ""} >
-                <button className={`${btnStyles.btn} ${btnStyles[type]}`}>
-                    {direction === 'diagonal' ? <FontAwesomeIcon icon={faArrowUpLong} className={btnStyles.diagonal} /> : null}
 
-                    {direction === 'left' ? <FontAwesomeIcon icon={faArrowLeftLong} /> : null}
+            {
+                to &&
+                <Link href={to || ""} >
+                    {Btn(type, direction)}
+                </Link>
+            }
 
-                    {direction === 'right' ? <FontAwesomeIcon icon={faArrowRightLong} /> : null}
+            {handleClick && Btn(type, direction, handleClick)}
 
-                    <div className={`${btnStyles.shadowEffect}`}></div>
-                </button>
-            </Link>
         </div >
     )
 }

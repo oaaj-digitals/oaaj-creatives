@@ -61,7 +61,7 @@
   justify-content: space-between;
 }
 
-.heading {
+.abtHeading {
   font-size: 2rem;
   font-weight: 600;
   width: 40%;
@@ -108,4 +108,77 @@
 .aboutSectBgText {
   bottom: 15%;
   left: 0;
+}
+
+/* Projects | Works Section */
+.wrkSection {
+  display: flex;
+  gap: 4rem;
+  flex-direction: column;
+
+  background-image: url("./assets/images/question-marks-bg.svg");
+  background-position: center;
+  background-size: contain;
+}
+
+.wrkTxtBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrkHeading {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--color-blue-light);
+}
+
+.headingSub {
+  width: 45%;
+  flex-shrink: 0;
+}
+
+.displayBox {
+  margin-left: 15vw;
+  padding-bottom: 2rem;
+  display: flex;
+  gap: 4rem;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-behavior: smooth;
+}
+
+.displayBox::-webkit-scrollbar {
+  height: 0.5rem;
+  border-radius: 1rem;
+}
+
+.displayBox::-webkit-scrollbar-button {
+  visibility: hidden;
+}
+
+.displayBox::-webkit-scrollbar-thumb {
+  background-color: var(--color-orange);
+  border-radius: 1rem;
+}
+
+.displayBox::-webkit-scrollbar-track {
+  border-radius: 1rem;
+  background-color: var(--color-ash);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    transparent,
+    var(--color-ash),
+    transparent,
+    transparent
+  );
+}
+
+.wrkNavDiv {
+  margin-left: 15vw;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
 }
