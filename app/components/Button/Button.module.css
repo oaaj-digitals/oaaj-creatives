@@ -83,8 +83,16 @@
   border-color: var(--foreground-color) !important;
 }
 
-.diagonal {
+.diagonal > svg {
   transform: rotateZ(45deg);
+}
+
+.right > svg {
+  transform: rotateZ(90deg);
+}
+
+.left > svg {
+  transform: rotateZ(270deg);
 }
 
 .shadowEffect {
@@ -107,4 +115,18 @@
 
 .right .shadowEffect {
   right: 15% !important;
+}
+
+.btn:active.diagonal .shadowEffect {
+  top: 15%;
+  right: 10%;
+}
+
+.btn:active.left .shadowEffect {
+  right: -5;
+  left: 10% !important;
+}
+
+.btn:active.right .shadowEffect {
+  right: 10% !important;
 }

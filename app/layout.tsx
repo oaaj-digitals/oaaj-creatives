@@ -16,12 +16,14 @@ const sora = Sora({
   subsets: ["latin"],
   weight: ['300', '400', '500', '600', '700'],
   variable: "--font-sora",
+  display: "block",
 });
 
 const outfit = Outfit({
   subsets: ["latin"],
   weight: ["900"],
   variable: "--font-outfit",
+  display: "block",
 });
 
 export const metadata: Metadata = {

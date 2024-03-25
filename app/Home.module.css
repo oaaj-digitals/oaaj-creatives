@@ -147,6 +147,7 @@
   overflow-x: scroll;
   overscroll-behavior-x: contain;
   scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
 }
 
 .displayBox::-webkit-scrollbar {
