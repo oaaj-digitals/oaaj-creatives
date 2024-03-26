@@ -112,10 +112,6 @@
 
 /* Projects | Works Section */
 .wrkSection {
-  display: flex;
-  gap: 4rem;
-  flex-direction: column;
-
   background-image: url("./assets/images/question-marks-bg.svg");
   background-position: center;
   background-size: contain;
@@ -177,9 +173,29 @@
   );
 }
 
-.wrkNavDiv {
+/* Utility Class Style */
+.wrkSection,
+.testimonialSection {
+  display: flex;
+  gap: 4rem;
+  flex-direction: column;
+}
+
+.scrollBtn {
   margin-left: 15vw;
   display: flex;
   gap: 2rem;
   justify-content: center;
+}
+
+/*  */
+.testimonialsBox {
+  margin-left: 15vw;
+  display: flex;
+  gap: 5rem;
+  overflow-x: scroll;
+}
+
+.testimonialsBox::-webkit-scrollbar {
+  display: none;
 }

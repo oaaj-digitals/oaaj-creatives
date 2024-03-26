@@ -1,40 +1,46 @@
 'use client';
-import { useEffect } from "react";
-import Button from "./Button/Button"
+import { useEffect, useState } from "react";
+import Button, { BtnProps } from "./Button/Button";
 
-let scrollableContent: HTMLElement | null = null;
-let scrollLength: number = 200
+interface Props {
+  scrollableElementId: string,
+  btnType: BtnProps["type"];
+}
 
-const ScrollBtn = () => {
+let scrollLength: number = 200;
+
+const ScrollBtn = ({ scrollableElementId, btnType }: Props) => {
+  let [scrollableElement, setScrollableElement] = useState<HTMLElement | null>(null);
 
   useEffect(() => {
-    scrollableContent = document.getElementById('displayProjects');
-    if (scrollableContent) {
-      const children = scrollableContent?.childNodes.length
-      scrollLength = scrollableContent.scrollWidth / (children - 1);
+    setScrollableElement(document.getElementById(scrollableElementId));
+    if (scrollableElement) {
+      const children = scrollableElement?.childNodes.length;
+      scrollLength = scrollableElement.scrollWidth / (children - 1);
     }
-  }, [])
+    console.log(scrollableElement);
+  }, []);
 
   const scrollLeft = () => {
-    scrollableContent?.scrollBy({
+    scrollableElement?.scrollBy({
       left: -scrollLength!,
       behavior: 'smooth'
     });
-  }
+  };
 
   const scrollRight = () => {
-    scrollableContent?.scrollBy({
+    scrollableElement?.scrollBy({
       left: scrollLength!,
       behavior: 'smooth'
     });
-  }
+  };
 
   return (
     <>
-      <Button direction="left" type="secondaryBtn" handleClick={scrollLeft}></Button>
-      <Button direction="right" type="secondaryBtn" handleClick={scrollRight}></Button>
+      <Button direction="left" type={btnType} handleClick={scrollLeft}></Button>
+      <Button direction="right" type={btnType} handleClick={scrollRight}></Button>
     </>
-  )
-}
+  );
+};
 
-export default ScrollBtn
+export default ScrollBtn;

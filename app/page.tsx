@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from "./Home.module.css";
 import Button from "./components/Button/Button";
 import Link from "next/link";
@@ -10,6 +10,7 @@ import DisplayProject from "./components/DisplayProject/DisplayProject";
 import ClipPath from "./components/DisplayProject/ClipPath";
 import img from '@/public/milad-fakurian-2sICkGsJRQY-unsplash.jpg';
 import ScrollBtn from "./components/ScrollBtn";
+import TestimonialCard from "./components/TestimonialCard/TestimonialCard";
 
 export default function Home() {
   return (
@@ -80,7 +81,7 @@ export default function Home() {
         <div className={`${styles.aboutSectBgText} noSelect bgText`} aria-hidden>About Us</div>
       </section>
 
-      <section className={`mt-20 mb-20 ${styles.wrkSection}`}>
+      <section className={`mt-20 ${styles.wrkSection}`}>
         <div className={styles.wrkTxtBox}>
           <h2 className={styles.wrkHeading}>Our Latest Works.</h2>
           <p className={styles.headingSub}>We take pride in crafting exceptional digital experiences, and we invite you to see how we&apos;ve helped our clients thrive.</p>
@@ -92,8 +93,27 @@ export default function Home() {
           <DisplayProject title="Test" image={img} category="web development" to="" />
           <DisplayProject title="Test" image={img} category="web development" to="" />
         </div>
-        <div className={styles.wrkNavDiv}>
-          <ScrollBtn />
+        <div className={styles.scrollBtn}>
+          <ScrollBtn scrollableElementId="displayProjects" btnType="secondaryBtn" key="1" />
+        </div>
+      </section>
+
+      <section className={`mt-20 mb-20 ${styles.testimonialSection}`}>
+        <div>
+          <h2 className={styles.wrkHeading}>Building Lasting Partnerships.</h2>
+          <p className={styles.headingSub}>We believe in building strong relationships with our clients. Here&apos;s what they appreciate about working with us.</p>
+        </div>
+        <div className={`${styles.testimonialsBox}`} id="Testimonials">
+          <TestimonialCard />
+          <TestimonialCard />
+          <TestimonialCard />
+          <TestimonialCard />
+          <TestimonialCard />
+          <TestimonialCard />
+          <TestimonialCard />
+        </div>
+        <div className={styles.scrollBtn}>
+          <ScrollBtn scrollableElementId="Testimonials" btnType="tertiaryBtn" key="2" />
         </div>
       </section>
     </main>

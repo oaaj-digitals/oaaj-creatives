@@ -1,6 +1,6 @@
 import { CSSProperties, ReactNode } from "react";
 import Link from "next/link";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpLong } from '@fortawesome/free-solid-svg-icons';
 import btnStyles from "./Button.module.css";
 
@@ -14,13 +14,15 @@ interface Props {
     handleClick?: () => void;
 }
 
+export type BtnProps = Props;
+
 const Btn = (type: Props['type'], direction: Props["direction"], handleClick?: Props["handleClick"]) => {
     return (<button className={`${btnStyles.btn} ${btnStyles[type]} ${btnStyles[direction]}`} onClick={handleClick && (() => handleClick())}>
         <FontAwesomeIcon icon={faArrowUpLong} />
 
         <div className={`${btnStyles.shadowEffect}`}></div>
-    </button>)
-}
+    </button>);
+};
 
 const Button = ({ children, to, direction, type, textColor, styles, handleClick }: Props) => {
     return (
@@ -37,7 +39,7 @@ const Button = ({ children, to, direction, type, textColor, styles, handleClick 
             {handleClick && Btn(type, direction, handleClick)}
 
         </div >
-    )
-}
+    );
+};
 
-export default Button
+export default Button;

@@ -1,0 +1,32 @@
+.testimonyBox {
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.testimonyIcon {
+  font-size: 2.5rem;
+  color: var(--color-orange);
+}
+
+.testimony {
+  margin-top: 1rem;
+  padding-bottom: 1.5rem;
+  min-height: 15rem;
+  border-bottom: 1px solid var(--color-ash);
+}
+
+.clientInfo {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-ash) !important;
+}
+
+.client {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-top: 2px;
+  border-top: 2px solid var(--color-ash);
+  align-self: flex-start;
+}
