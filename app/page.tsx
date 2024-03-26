@@ -98,7 +98,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={`mt-20 mb-20 ${styles.testimonialSection}`}>
+      <section className={`mt-20 ${styles.testimonialSection}`}>
         <div>
           <h2 className={styles.wrkHeading}>Building Lasting Partnerships.</h2>
           <p className={styles.headingSub}>We believe in building strong relationships with our clients. Here&apos;s what they appreciate about working with us.</p>
@@ -115,6 +115,13 @@ export default function Home() {
         <div className={styles.scrollBtn}>
           <ScrollBtn scrollableElementId="Testimonials" btnType="tertiaryBtn" key="2" />
         </div>
+      </section>
+      <section className={`mt-20 mb-20 ${styles.CTASection}`}>
+        <p className={styles.CTA}>
+          Let&apos;s collaborate.<br />
+          We&apos;re ready to create something amazing with you.
+        </p>
+        <Button to="/contact_us" direction="diagonal" type={"primaryBtn"} />
       </section>
     </main>
   );
