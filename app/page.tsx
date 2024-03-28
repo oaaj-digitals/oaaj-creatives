@@ -93,7 +93,7 @@ export default function Home() {
       <section className={`mt-20 ${styles.testimonialSection}`}>
         <div>
           <h2 className={styles.wrkHeading}>Building Lasting Partnerships.</h2>
-          <p className={styles.headingSub}>We believe in building strong relationships with our clients. Here&apos;s what they appreciate about working with us.</p>
+          <p className={`${styles.headingSub} ${styles.testimonialSub}`}>We believe in building strong relationships with our clients. Here&apos;s what they appreciate about working with us.</p>
         </div>
         <Testimonials />
       </section>

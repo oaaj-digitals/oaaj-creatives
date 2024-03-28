@@ -3,6 +3,8 @@
   display: flex;
   gap: 5rem;
   overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-behavior: smooth;
 }
 
 .testimonials::-webkit-scrollbar {

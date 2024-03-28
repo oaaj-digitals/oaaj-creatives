@@ -132,7 +132,6 @@
   overflow-x: scroll;
   overscroll-behavior-x: contain;
   scroll-behavior: smooth;
-  overscroll-behavior-x: contain;
 }
 
 .displayBox::-webkit-scrollbar {
@@ -177,17 +176,13 @@
   justify-content: center;
 }
 
-/*  */
-.testimonialsBox {
-  margin-left: 15vw;
-  display: flex;
-  gap: 5rem;
-  overflow-x: scroll;
+/* Testimonial Styles */
+
+.testimonialSub {
+  width: 100%;
 }
 
-.testimonialsBox::-webkit-scrollbar {
-  display: none;
-}
+/* CTA Styles */
 
 .CTASection {
   display: flex;
