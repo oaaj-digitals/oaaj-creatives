@@ -18,7 +18,7 @@ export type BtnProps = Props;
 
 const Btn = (type: Props['type'], direction: Props["direction"], handleClick?: Props["handleClick"]) => {
     return (<button className={`${btnStyles.btn} ${btnStyles[type]} ${btnStyles[direction]}`} onClick={handleClick && (() => handleClick())}>
-        <FontAwesomeIcon icon={faArrowUpLong} />
+        <FontAwesomeIcon icon={faArrowUpLong} size="xs" />
 
         <div className={`${btnStyles.shadowEffect}`}></div>
     </button>);

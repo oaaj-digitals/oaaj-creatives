@@ -3,13 +3,13 @@ import { Sora, Outfit } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import logo from '@/public/imgs/logo.svg';
-import headerStyles from "./Header.module.css"
-import footerStyle from "./Footer.module.css"
+import headerStyles from "./Header.module.css";
+import footerStyle from "./Footer.module.css";
 import Link from "next/link";
 
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css'
-config.autoAddCss = false
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+config.autoAddCss = false;
 
 
 const sora = Sora({
@@ -61,9 +61,6 @@ export default function RootLayout({
 
         <>{children}</>
 
-
-
-
         <footer className={footerStyle.footer}>
           <svg viewBox="0 0 1920 614" fill="none" xmlns="http://www.w3.org/2000/svg" className={footerStyle.footerBg}>
             <defs>
@@ -86,17 +83,17 @@ export default function RootLayout({
               <div>
                 <p className={footerStyle.navTitle}>What we do</p>
                 <div className={footerStyle.linkList}>
-                  <Link href="">Home</Link>
+                  <Link href="/">Home</Link>
                   <Link href="">Work</Link>
                   <Link href="">Services</Link>
-                  <Link href="">Contact Us</Link>
+                  <Link href="/contact_us">Contact Us</Link>
                 </div>
               </div>
 
               <div>
                 <p className={footerStyle.navTitle}>Who we are</p>
                 <div className={footerStyle.linkList}>
-                  <Link href="">About Us</Link>
+                  <Link href="/about_us">About Us</Link>
                   <Link href="">FAQ</Link>
                 </div>
               </div>
@@ -104,18 +101,18 @@ export default function RootLayout({
               <div>
                 <p className={footerStyle.navTitle}>Connect with Us</p>
                 <div className={footerStyle.linkList}>
-                  <Link href="">Github</Link>
-                  <Link href="">Behance</Link>
-                  <Link href="">Twitter</Link>
-                  <Link href="">Instagram</Link>
+                  <Link href="https://github.com/oaaj-digitals" target="_blank" >Github</Link>
+                  <Link href="https://www.behance.net/oaaj_digital" target="_blank" >Behance</Link>
+                  <Link href="https://twitter.com/oaaj_digital" target="_blank" >Twitter</Link>
+                  <Link href="https://www.instagram.com/oaaj_digital/" target="_blank" >Instagram</Link>
                 </div>
               </div>
 
               <div>
                 <p className={footerStyle.navTitle}>Contact Us</p>
                 <div className={footerStyle.linkList}>
-                  <Link href="">+234(0) 817 080 6890</Link>
-                  <Link href="">info@oaajcreatives.com</Link>
+                  <Link href="tel:+2348170806890" target="_blank">+234(0) 817 080 6890</Link>
+                  <Link href="mailto:info@oaajcreatives.com" target="_blank">info@oaajcreatives.com</Link>
                 </div>
               </div>
             </nav>

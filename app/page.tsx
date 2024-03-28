@@ -11,6 +11,8 @@ import ClipPath from "./components/DisplayProject/ClipPath";
 import img from '@/public/milad-fakurian-2sICkGsJRQY-unsplash.jpg';
 import ScrollBtn from "./components/ScrollBtn";
 import TestimonialCard from "./components/TestimonialCard/TestimonialCard";
+import ServicesCard from "./components/ServicesCard/ServicesCard";
+import Testimonials from "./components/Testimonials/Testimonials";
 
 export default function Home() {
   return (
@@ -51,31 +53,21 @@ export default function Home() {
         <h3 className={styles.abtHeading}>Driven by passion, we&apos;re a team of friendly creatives who transform brand visions into unique digital experiences.</h3>
         <div className={styles.txtBox}>
           <p>OAAJ is a creative agency fueled by a shared passion for crafting exceptional digital experiences. Born from a desire to bridge the gap between imagination and reality, our team of experienced designers, developers, and strategists collaborate to transform your brand vision into aunique and engaging online presence. We believe in building long-lasting relationships with our clients, becoming an extension of their team and guiding them through every step of the journey.</p>
-          <Button direction="diagonal" type="primaryBtn" textColor="orange" styles={{ marginTop: "2.5rem" }}>More</Button>
+          <Button direction="diagonal" type="primaryBtn" textColor="orange" styles={{ marginTop: "2.5rem" }} to="/about_us">More</Button>
         </div>
 
-        <div className={styles.coreValueBox}>
-          <div className={`${styles.coreDiv} ${styles.webDev}`}>
-            <h5 className={styles.coreTitle}>Web Development</h5>
-            <p>We build modern, responsive websites that captivate your audience anddrive results.</p>
-          </div>
+        <div className={styles.servicesBox}>
+          <ServicesCard title="Web Development" description="We build modern, responsive websites that captivate your audience anddrive results." />
 
-          <div className={`${styles.coreDiv} ${styles.uiDesign}`}>
-            <h5 className={styles.coreTitle}>UI Design</h5>
-            <p>We design intuitive and engaging user interfaces that enhance your user experience.</p>
-          </div>
+          <ServicesCard title="UI Design" description="We design intuitive and engaging user interfaces that enhance your user experience." />
+
 
           <Image src={logo} alt="OAAJ Creative Labs Logo" className={`${styles.logoImg} noSelect`} aria-hidden />
 
-          <div className={`${styles.coreDiv} ${styles.logoDesign}`}>
-            <h5 className={styles.coreTitle}>Logo Design</h5>
-            <p>We create impactful logos that represent your brand and make a lasting impression.</p>
-          </div>
+          <ServicesCard title="Logo Design" description="We create impactful logos that represent your brand and make a lasting impression." />
 
-          <div className={`${styles.coreDiv} ${styles.graphicsDesign}`}>
-            <h5 className={styles.coreTitle}>Graphics Design</h5>
-            <p>We create compelling graphic designs for all your needs, from infographics to marketing materials.</p>
-          </div>
+          <ServicesCard title="Graphics Design" description="We create compelling graphic designs for all your needs, from infographics to marketing materials." />
+
         </div>
 
         <div className={`${styles.aboutSectBgText} noSelect bgText`} aria-hidden>About Us</div>
@@ -103,18 +95,7 @@ export default function Home() {
           <h2 className={styles.wrkHeading}>Building Lasting Partnerships.</h2>
           <p className={styles.headingSub}>We believe in building strong relationships with our clients. Here&apos;s what they appreciate about working with us.</p>
         </div>
-        <div className={`${styles.testimonialsBox}`} id="Testimonials">
-          <TestimonialCard />
-          <TestimonialCard />
-          <TestimonialCard />
-          <TestimonialCard />
-          <TestimonialCard />
-          <TestimonialCard />
-          <TestimonialCard />
-        </div>
-        <div className={styles.scrollBtn}>
-          <ScrollBtn scrollableElementId="Testimonials" btnType="tertiaryBtn" key="2" />
-        </div>
+        <Testimonials />
       </section>
       <section className={`mt-20 mb-20 ${styles.CTASection}`}>
         <p className={styles.CTA}>

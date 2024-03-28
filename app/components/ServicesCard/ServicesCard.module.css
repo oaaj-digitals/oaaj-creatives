@@ -1,0 +1,9 @@
+.card {
+  width: 30%;
+}
+
+.title {
+  font-weight: 500;
+  color: var(--color-ash);
+  margin-bottom: 0.5rem;
+}

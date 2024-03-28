@@ -30,3 +30,7 @@
   border-top: 2px solid var(--color-ash);
   align-self: flex-start;
 }
+
+.position {
+  font-size: 1.3rem;
+}

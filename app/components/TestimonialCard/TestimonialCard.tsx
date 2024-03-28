@@ -18,7 +18,7 @@ const TestimonialCard = ({ testimony, client }: Props) => {
 
       <div className={styles.clientInfo}>
         <h5 className={styles.client}>{client?.name || "John Doe"}</h5>
-        <p>{client?.position || "CEO & Founder of Honesty"}</p>
+        <p className={styles.position}>{client?.position || "CEO & Founder of Honesty"}</p>
       </div>
     </div>
   );

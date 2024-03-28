@@ -1,0 +1,17 @@
+.testimonials {
+  margin-left: 15vw;
+  display: flex;
+  gap: 5rem;
+  overflow-x: scroll;
+}
+
+.testimonials::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollBtn {
+  margin-left: 15vw;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}

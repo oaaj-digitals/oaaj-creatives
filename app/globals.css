@@ -28,7 +28,7 @@ html {
 body {
   color: var(--foreground-color);
   background-color: var(--background-color);
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 
@@ -107,12 +107,12 @@ body > * {
 
 @media (max-width: 37.5em) {
   html {
-    font-size: 43.75%;
+    font-size: 47%;
   }
 }
 
 @media (min-width: 112.5em) {
   html {
-    font-size: 75%;
+    font-size: 105%;
   }
 }
