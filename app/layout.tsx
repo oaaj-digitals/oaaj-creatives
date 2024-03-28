@@ -49,13 +49,15 @@ export default function RootLayout({
     <html lang="en" className={`${sora.variable} ${outfit.variable}`}>
       <body>
         <header className={headerStyles.header} >
-          <Link href={""}><Image src={logo} alt="OAAJ Creative Lab Logo" height={`${30}`} /></Link>
+          <Link href="/">
+            <Image src={logo} alt="OAAJ Creative Lab Logo" height={`${30}`} />
+          </Link>
           <nav className={"nav " + headerStyles.nav}>
-            <Link href={""} className={".active"}>Home</Link>
-            <Link href={""}>Services</Link>
-            <Link href={""}>Work</Link>
-            <Link href={""}>About Us</Link>
-            <Link href={""} className={headerStyles.contact}>Let&lsquo;s Talk</Link>
+            <Link href="/" className={".active"}>Home</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/work">Work</Link>
+            <Link href="/about_us">About Us</Link>
+            <Link href="/contact_us" className={headerStyles.contact}>Let&lsquo;s Talk</Link>
           </nav>
         </header>
 
@@ -73,9 +75,12 @@ export default function RootLayout({
               </linearGradient>
             </defs>
           </svg>
+
           <div className={footerStyle.topDiv}>
             <div className={footerStyle.logoSloganBox}>
-              <Link href={""}><Image src={logo} height={35} alt="OAAJ Creative Labs Logo" /></Link>
+              <Link href={"/"}>
+                <Image src={logo} height={35} alt="OAAJ Creative Labs Logo" />
+              </Link>
               <p className={footerStyle.slogan}>From Thought to Reality.</p>
             </div>
 
@@ -84,8 +89,8 @@ export default function RootLayout({
                 <p className={footerStyle.navTitle}>What we do</p>
                 <div className={footerStyle.linkList}>
                   <Link href="/">Home</Link>
-                  <Link href="">Work</Link>
-                  <Link href="">Services</Link>
+                  <Link href="/work">Work</Link>
+                  <Link href="/services">Services</Link>
                   <Link href="/contact_us">Contact Us</Link>
                 </div>
               </div>
@@ -94,7 +99,7 @@ export default function RootLayout({
                 <p className={footerStyle.navTitle}>Who we are</p>
                 <div className={footerStyle.linkList}>
                   <Link href="/about_us">About Us</Link>
-                  <Link href="">FAQ</Link>
+                  <Link href="/faq">FAQ</Link>
                 </div>
               </div>
 
