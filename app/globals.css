@@ -83,6 +83,16 @@ body > * {
   font-style: 900;
   letter-spacing: 3px;
   opacity: 0.02;
+  z-index: -10;
+}
+
+.link {
+  cursor: pointer;
+  color: var(--color-orange);
+}
+
+.link:hover {
+  color: inherit;
 }
 
 /* Media Breakpoints */
