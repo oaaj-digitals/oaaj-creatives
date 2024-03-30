@@ -1,0 +1,117 @@
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  margin-top: 5rem;
+}
+
+.section:last-child {
+  margin-bottom: 5rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.titleMain {
+  color: var(--color-blue-light);
+}
+
+.titleSub {
+  color: var(--color-orange);
+}
+
+.introDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+}
+
+.image {
+  width: 35rem;
+  height: 35rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 100%;
+}
+
+.text {
+  width: 45%;
+  flex-shrink: 0;
+}
+
+.coreValues {
+  padding: 0 5rem;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10rem;
+}
+
+.coreValuesBg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: max-content;
+}
+
+.missionVision {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 5rem;
+}
+
+.mvDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mvTextBox {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mvHeading {
+  font-size: 3rem;
+  color: var(--color-orange);
+  font-weight: 700;
+}
+
+.mvText {
+  padding-left: 3rem;
+}
+
+.testimonialIntro {
+  padding-left: 7vw;
+}
+
+.faq {
+  width: 50%;
+}
+
+.faq:nth-child(even) {
+  align-self: flex-end;
+}
+
+.faqQuestion {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-orange);
+}
+
+.faqAnswer {
+  padding-left: 3rem;
+}
+
+.faqBg {
+  bottom: 0;
+  right: 0;
+}
