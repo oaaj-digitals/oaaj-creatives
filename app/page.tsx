@@ -73,7 +73,7 @@ export default function Home() {
         <div className={`${styles.aboutSectBgText} noSelect bgText`} aria-hidden>About Us</div>
       </section>
 
-      <section className={`mt-20 ${styles.wrkSection}`}>
+      <section className={styles.wrkSection}>
         <div className={styles.wrkTxtBox}>
           <h2 className={styles.wrkHeading}>Our Latest Works.</h2>
           <p className={styles.headingSub}>We take pride in crafting exceptional digital experiences, and we invite you to see how we&apos;ve helped our clients thrive.</p>
@@ -90,14 +90,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={`mt-20 ${styles.testimonialSection}`}>
+      <section className={styles.testimonialSection}>
         <div>
           <h2 className={styles.wrkHeading}>Building Lasting Partnerships.</h2>
           <p className={`${styles.headingSub} ${styles.testimonialSub}`}>We believe in building strong relationships with our clients. Here&apos;s what they appreciate about working with us.</p>
         </div>
         <Testimonials />
       </section>
-      <section className={`mt-20 mb-20 ${styles.CTASection}`}>
+      <section className={styles.CTASection}>
         <p className={styles.CTA}>
           Let&apos;s collaborate.<br />
           We&apos;re ready to create something amazing with you.
